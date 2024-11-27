@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .search-filter {
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .search-filter input,
+        .search-filter select,
+        .search-filter button {
+            margin-bottom: 10px;
+        }
+        .table-container {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>ICARE Tele</h1>
+        <div class="user-info">
+            <span class="badge bg-success">Nishant Kumar</span>
+        </div>
+    </div>
+
+    <!-- Search/Filter Section -->
+    <div class="container mt-4">
+        <div class="search-filter">
+            <h4>Search/Filter Section</h4>
+            <form class="row g-3">
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Patient ID">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Patient Name">
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select">
+                        <option selected>New</option>
+                        <option value="1">In Progress</option>
+                        <option value="2">Completed</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="date" class="form-control" placeholder="From Date">
+                </div>
+                <div class="col-md-2">
+                    <input type="date" class="form-control" placeholder="To Date">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Find</button>
+                    <button type="button" class="btn btn-secondary">Reset</button>
+                    <button type="button" class="btn btn-info">Export Excel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="container table-container">
+        <h4>Results</h4>
+        <div>
+            <span class="status-indicator bg-primary"></span> Radiology detected TB patient
+            <span class="status-indicator bg-warning"></span> AI detected TB patient
+            <span class="status-indicator bg-success"></span> TB patient detected by both
+        </div>
+        <table class="table table-striped table-hover mt-3">
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Center Name</th>
+                    <th>Ref Physician</th>
+                    <th>Description</th>
+                    <th>Assigned Doctor</th>
+                    <th>Image Count</th>
+                    <th>Report Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button class="btn btn-sm btn-success">View</button></td>
+                    <td>24924</td>
+                    <td>MD. SULTAN</td>
+                    <td>18Y</td>
+                    <td>M</td>
+                    <td>Sadar Hospital, Sasaram</td>
+                    <td>Dr. S.H.S</td>
+                    <td>Chest PA</td>
+                    <td>Dr. J. Rattan</td>
+                    <td>1</td>
+                    <td>New</td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-sm btn-success">View</button></td>
+                    <td>E59427</td>
+                    <td>JUHI KUMARI</td>
+                    <td>27Y</td>
+                    <td>F</td>
+                    <td>Sadar Hospital, Bihar</td>
+                    <td>Dr. S.H.S</td>
+                    <td>Chest PA</td>
+                    <td>Dr. J. Rattan</td>
+                    <td>2</td>
+                    <td>New</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9faff;
+    color: #000;
+}
+
+/* Header */
+header {
+    background-color: #2db4eb;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Login Box */
+.login-box {
+    background: linear-gradient(145deg, #37b9ff, #1da1e6);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-box input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button {
+    background-color: #1da1e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #128dc3;
+}
+
+/* Diagram Section */
+.diagram {
+    display: grid;
+    grid-template-areas:
+        ". requesting ."
+        "data-centers . portable-devices"
+        "reading-radiologist referring-physicians .";
+    gap: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.node {
+    background-color: #37b9ff;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.requesting {
+    grid-area: requesting;
+}
+
+.portable-devices {
+    grid-area: portable-devices;
+}
+
+.referring-physicians {
+    grid-area: referring-physicians;
+}
+
+.reading-radiologist {
+    grid-area: reading-radiologist;
+}
+
+.data-centers {
+    grid-area: data-centers;
+}
